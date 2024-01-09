@@ -1,0 +1,192 @@
+/* Header */
+.Header {
+  position: fixed;
+  top: 0px;
+
+  width: 100%;
+  height: 145px;
+  padding-inline: 2rem;
+
+  transition: opacity .3s ease;
+
+  z-index: 100;
+}
+
+.Header .brand {
+  width: 11%;
+}
+
+.Header .menuBars {
+  display: none;
+}
+
+.Header .menu {
+  width: 90%;
+  gap: 2rem;
+
+  transition: .3s ease;
+}
+
+.Header .links {
+  width: 77%;
+  gap: 2rem;
+}
+
+.Header .orderBtn {
+  width: 23%;
+  gap: 2rem;
+}
+
+.Header .socials {
+  gap: 2rem;
+}
+
+/* Footer */
+.Footer {
+  position: relative;
+}
+
+.Footer .content {
+  padding: 2rem;
+
+  background-image: url('/images/MapCut.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Footer .hours {
+  position: absolute;
+}
+
+@media (max-width: 2000px) {
+  /* Header */
+  .Header .links {
+    width: 70%;
+  }
+
+  .Header .orderBtn {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1500px) {
+  /* Header */
+  .Header .links {
+    width: 65%;
+  }
+
+  .Header .orderBtn {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Header */
+  .Header .brand {
+    width: 200px;
+  }
+
+  .Header .menuBars {
+    display: flex;
+  }
+
+  .Header .menu {
+    position: absolute;
+
+    background: var(--color-primary-300);
+    padding: 5rem 3rem;
+
+    height: calc(100vh - 140px);
+    transform: translateY(140px);
+
+    width: 100vw;
+    top: 0;
+    left: 100%;
+
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 5rem;
+
+    z-index: -1;
+  }
+
+  .Header .menu > * {
+    width: 30%;
+    white-space: nowrap;
+  }
+
+  .Header .links {
+    font-size: 2.6rem;
+    font-weight: 700;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .Header .orderBtn {
+    width: 250px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .Header .socials {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* Footer */
+  .Footer .content .primaryContent {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Footer .contact,
+  .Footer .contact .contactItem {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Footer .footerLinks {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Footer .copyright {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Header */
+  .Header .menu > * {
+    width: 100%;
+  }
+
+  .Header .links {
+    font-size: 1.5rem;
+
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .Header .orderBtn {
+    align-items: center;
+  }
+
+  /* Footer */
+  .Footer .primaryContent {
+    gap: 3.2rem;
+  }
+}
